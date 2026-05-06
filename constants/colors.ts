@@ -1,8 +1,9 @@
 /**
  * Design tokens — colors
  *
- * Single source of truth for every color in Dram.
- * Import from here; never hardcode hex strings elsewhere.
+ * Single source of truth for every color in the app.
+ * Change values here; every screen and component updates automatically.
+ * Never hardcode hex strings anywhere else.
  *
  * Usage:
  *   import { COLORS } from '@/constants/colors';
@@ -15,21 +16,20 @@ export const COLORS = {
   BG_CARD:     '#1A1A1A', // card / surface
   BG_ELEVATED: '#222222', // modals, bottom sheets
 
-  // ─── Accent — amber ────────────────────────────────────────────────────────
-  // Use for: amounts, active state, primary CTA, highlights
-  // Never use decoratively — amber = active/accent only
-  AMBER:     '#0ead69',
-  AMBER_DIM: '#0ead69', // amber badge background
+  // ─── Accent ────────────────────────────────────────────────────────────────
+  // Change these two per app — everything else stays the same
+  ACCENT:     '#EF9F27', // primary accent: active state, CTAs, highlights
+  ACCENT_DIM: '#2A1A00', // accent badge / tinted background
 
   // ─── Semantic — red ────────────────────────────────────────────────────────
-  // Use for: allergy warnings, urgent alerts, destructive actions
+  // Use for: errors, destructive actions, urgent alerts
   RED:     '#E24B4A',
-  RED_DIM: '#2A0A0A', // red badge background
+  RED_DIM: '#2A0A0A',
 
   // ─── Semantic — green ──────────────────────────────────────────────────────
-  // Use for: done, safe, confirmed, non-alcoholic
+  // Use for: success, confirmed, safe
   GREEN:     '#1D9E75',
-  GREEN_DIM: '#0A1F10', // green badge background
+  GREEN_DIM: '#0A1F10',
 
   // ─── Text ──────────────────────────────────────────────────────────────────
   TEXT_PRIMARY:   '#F0EBE0', // main readable text
