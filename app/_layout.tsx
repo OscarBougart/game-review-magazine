@@ -25,14 +25,6 @@ export default function RootLayout(): React.JSX.Element | null {
         }}
       >
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen
-          name="recipe/[id]"
-          options={{ title: 'Recipe', headerBackTitle: 'Back' }}
-        />
-        <Stack.Screen
-          name="recipe/new"
-          options={{ title: 'New Recipe', presentation: 'modal' }}
-        />
       </Stack>
     </GestureHandlerRootView>
   );

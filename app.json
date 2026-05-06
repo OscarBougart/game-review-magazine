@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "Dram",
-    "slug": "dram",
+    "name": "app-factory-template",
+    "slug": "app-factory-template",
     "version": "1.0.0",
     "orientation": "portrait",
-    "scheme": "dram",
+    "scheme": "app-factory-template",
     "userInterfaceStyle": "dark",
     "newArchEnabled": true,
     "ios": {

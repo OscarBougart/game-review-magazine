@@ -27,18 +27,9 @@ export default function TabsLayout(): React.JSX.Element {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Recipes',
+          title: 'Home',
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="book-outline" size={size} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="notes"
-        options={{
-          title: 'Shift Notes',
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="pencil-outline" size={size} color={color} />
+            <Ionicons name="home-outline" size={size} color={color} />
           ),
         }}
       />

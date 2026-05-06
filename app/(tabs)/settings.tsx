@@ -7,6 +7,7 @@ export default function SettingsScreen(): React.JSX.Element {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Settings</Text>
+      <Text style={styles.subtitle}>App preferences and configuration</Text>
     </View>
   );
 }
@@ -22,5 +23,10 @@ const styles = StyleSheet.create({
     color: COLORS.TEXT_PRIMARY,
     fontSize: FONT_SIZE.XL,
     fontWeight: FONT_WEIGHT.BOLD,
+    marginBottom: SPACE.XS,
+  },
+  subtitle: {
+    color: COLORS.TEXT_SECONDARY,
+    fontSize: FONT_SIZE.MD,
   },
 });
