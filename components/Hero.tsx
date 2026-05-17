@@ -154,7 +154,8 @@ export default function Hero({ review }: HeroProps) {
         >
           <ScoreBadge score={review.score} size="lg" />
 
-          <button
+          <a
+            href={`/reviews/${review.slug}`}
             style={{
               fontFamily: "'Public Sans', system-ui, sans-serif",
               fontSize: 13,
@@ -169,19 +170,22 @@ export default function Hero({ review }: HeroProps) {
               minHeight: 44,
               cursor: 'pointer',
               transition: 'border-color 150ms ease-out, color 150ms ease-out',
+              textDecoration: 'none',
+              display: 'inline-flex',
+              alignItems: 'center',
             }}
-            onMouseEnter={(e: React.MouseEvent<HTMLButtonElement>) => {
+            onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => {
               e.currentTarget.style.borderColor = '#EF9F27';
               e.currentTarget.style.color = '#EF9F27';
             }}
-            onMouseLeave={(e: React.MouseEvent<HTMLButtonElement>) => {
+            onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => {
               e.currentTarget.style.borderColor = '#F0EBE0';
               e.currentTarget.style.color = '#F0EBE0';
             }}
             aria-label={`Read full review of ${review.title}`}
           >
             Read Review
-          </button>
+          </a>
         </div>
 
         {/* Meta */}

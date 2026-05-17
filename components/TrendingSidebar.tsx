@@ -53,26 +53,26 @@ export default function TrendingSidebar({ reviews }: TrendingSidebarProps) {
       <ol style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 2 }}>
         {reviews.map((review, idx) => (
           <li key={review.id}>
-            <button
+            <a
+              href={`/reviews/${review.slug}`}
               style={{
                 display: 'flex',
                 alignItems: 'center',
                 gap: 12,
                 width: '100%',
                 backgroundColor: 'transparent',
-                border: 'none',
                 borderLeft: '2px solid transparent',
                 borderRadius: 0,
                 padding: '8px 0 8px 8px',
                 cursor: 'pointer',
-                textAlign: 'left',
+                textDecoration: 'none',
                 transition: 'border-color 150ms ease-out, background-color 150ms ease-out',
               }}
-              onMouseEnter={(e: React.MouseEvent<HTMLButtonElement>) => {
+              onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => {
                 e.currentTarget.style.borderLeftColor = '#EF9F27';
                 e.currentTarget.style.backgroundColor = 'rgba(239,159,39,0.05)';
               }}
-              onMouseLeave={(e: React.MouseEvent<HTMLButtonElement>) => {
+              onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => {
                 e.currentTarget.style.borderLeftColor = 'transparent';
                 e.currentTarget.style.backgroundColor = 'transparent';
               }}
@@ -154,7 +154,7 @@ export default function TrendingSidebar({ reviews }: TrendingSidebarProps) {
                 {review.score}
                 <span style={{ fontSize: 10, color: '#444444' }}>/10</span>
               </span>
-            </button>
+            </a>
           </li>
         ))}
       </ol>
