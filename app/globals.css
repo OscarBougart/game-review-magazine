@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400;0,700;1,400&family=Public+Sans:wght@300;400;500;600&family=Russo+One&display=swap');
+
+@import "tailwindcss";
+
+@theme inline {
+  /* ── Colours ─────────────────────────────────────────── */
+  --color-bg-primary:    #111111;
+  --color-bg-card:       #1A1A1A;
+  --color-bg-elevated:   #222222;
+  --color-border:        #2A2A2A;
+
+  --color-accent:        #EF9F27;
+  --color-accent-dim:    #2A1A00;
+
+  --color-text:          #F0EBE0;
+  --color-text-secondary:#888888;
+  --color-text-muted:    #444444;
+
+  --color-error:         #E24B4A;
+  --color-success:       #1D9E75;
+
+  /* ── Typography ──────────────────────────────────────── */
+  --font-editorial:  'Libre Bodoni', Georgia, serif;
+  --font-ui:         'Russo One', 'Arial Black', sans-serif;
+  --font-body:       'Public Sans', system-ui, sans-serif;
+
+  /* ── Spacing ─────────────────────────────────────────── */
+  --space-xs:  4px;
+  --space-sm:  8px;
+  --space-md:  16px;
+  --space-lg:  24px;
+  --space-xl:  32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+
+  /* ── Shadows ─────────────────────────────────────────── */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+  --shadow-xl: 0 20px 25px rgba(0,0,0,0.15);
+}
+
+/* ── Reset & base ───────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: #111111;
+  color: #F0EBE0;
+  font-family: 'Public Sans', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Focus ──────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid #EF9F27;
+  outline-offset: 2px;
+}
+
+/* ── Scrollbar ──────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #111111; }
+::-webkit-scrollbar-thumb { background: #2A2A2A; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #EF9F27; }
+
+/* ── Parallax ───────────────────────────────────────────── */
+.parallax-image {
+  transform: translateY(var(--parallax-offset, 0px));
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .parallax-image { transform: none !important; }
+}

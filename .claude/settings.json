@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(ui-ux-pro-max)",
+      "Skill(ui-ux-pro-max:*)",
+      "Bash(python3 .claude/skills/ui-ux-pro-max/scripts/search.py \"game review magazine editorial dark web\" --design-system --stack nextjs --persist -p \"Game Review Magazine\")",
+      "Bash(python .claude/skills/ui-ux-pro-max/scripts/search.py \"game review magazine editorial dark web\" --design-system --stack nextjs --persist -p \"Game Review Magazine\")",
+      "Bash(python .claude/skills/ui-ux-pro-max/scripts/search.py \"editorial dark magazine brutalism cinematic\" --domain style)"
+    ]
+  }
+}
