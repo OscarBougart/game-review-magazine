@@ -1,5 +1,12 @@
 {
   "/_global-error/page": "/_global-error",
   "/_not-found/page": "/_not-found",
-  "/page": "/"
+  "/about/page": "/about",
+  "/best-of-2026/page": "/best-of-2026",
+  "/categories/[slug]/page": "/categories/[slug]",
+  "/categories/page": "/categories",
+  "/page": "/",
+  "/reviews/[slug]/page": "/reviews/[slug]",
+  "/reviews/page": "/reviews",
+  "/write/page": "/write"
 }

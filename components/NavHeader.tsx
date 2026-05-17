@@ -1,11 +1,12 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 const NAV_LINKS = [
   { label: 'Reviews', href: '/reviews' },
   { label: 'Categories', href: '/categories' },
-  { label: 'Best of 2024', href: '/best-of-2024' },
+  { label: 'Best of 2026', href: '/best-of-2026' },
   { label: 'About', href: '/about' },
 ];
 
@@ -73,11 +74,14 @@ export default function NavHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
-  // Detect scroll past hero to apply backdrop blur
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 80);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    const update = () => {
+      const y = window.scrollY ?? window.pageYOffset ?? document.documentElement.scrollTop;
+      setScrolled(y > 10);
+    };
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    return () => window.removeEventListener('scroll', update);
   }, []);
 
   // Close mobile menu on Escape
@@ -96,7 +100,7 @@ export default function NavHeader() {
     return () => { document.body.style.overflow = ''; };
   }, [menuOpen]);
 
-  const currentPath = typeof window !== 'undefined' ? window.location.pathname : '/';
+  const currentPath = usePathname();
 
   return (
     <>
@@ -110,12 +114,8 @@ export default function NavHeader() {
           height: 60,
           display: 'flex',
           alignItems: 'center',
-          // Transparent over hero; gains backdrop blur after scrolling past it
-          backgroundColor: scrolled ? 'rgba(17,17,17,0.92)' : 'transparent',
-          backdropFilter: scrolled ? 'blur(12px)' : 'none',
-          WebkitBackdropFilter: scrolled ? 'blur(12px)' : 'none',
-          borderBottom: scrolled ? '1px solid #2A2A2A' : '1px solid transparent',
-          transition: 'background-color 250ms ease-out, backdrop-filter 250ms ease-out, border-color 250ms ease-out',
+          backgroundColor: '#111111',
+          borderBottom: '1px solid #2A2A2A',
         }}
         role="banner"
       >
@@ -249,7 +249,7 @@ export default function NavHeader() {
 
             {/* Write / Submit CTA */}
             <a
-              href="/submit"
+              href="/write"
               style={{
                 fontFamily: "'Public Sans', system-ui, sans-serif",
                 fontSize: 11,
@@ -419,7 +419,7 @@ export default function NavHeader() {
         {/* Mobile Write CTA */}
         <div style={{ paddingBottom: 40, paddingTop: 32, flexShrink: 0 }}>
           <a
-            href="/submit"
+            href="/write"
             style={{
               fontFamily: "'Public Sans', system-ui, sans-serif",
               fontSize: 13,

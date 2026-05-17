@@ -26,6 +26,7 @@
 | Text primary | `#F0EBE0` | `TEXT_PRIMARY` | `--color-text` |
 | Text secondary | `#888888` | `TEXT_SECONDARY` | `--color-text-secondary` |
 | Text muted | `#444444` | `TEXT_MUTED` | `--color-text-muted` |
+| Text article | `#C4BDB4` | `TEXT_ARTICLE` | `--color-text-article` |
 | Accent / CTA | `#EF9F27` | `ACCENT` | `--color-cta` |
 | Accent dim | `#2A1A00` | `ACCENT_DIM` | `--color-cta-dim` |
 | Error | `#E24B4A` | `RED` | `--color-error` |

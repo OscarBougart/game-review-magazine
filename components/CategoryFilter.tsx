@@ -14,7 +14,7 @@ export default function CategoryFilter({ active, onChange }: CategoryFilterProps
       aria-label="Filter reviews by category"
       style={{
         position: 'sticky',
-        top: 0,
+        top: 60,
         zIndex: 20,
         backgroundColor: '#111111',
         borderBottom: '1px solid #2A2A2A',
@@ -47,7 +47,7 @@ export default function CategoryFilter({ active, onChange }: CategoryFilterProps
                 fontWeight: 600,
                 textTransform: 'uppercase',
                 letterSpacing: '0.1em',
-                color: isActive ? '#EF9F27' : '#888888',
+                color: isActive ? '#F0EBE0' : '#888888',
                 backgroundColor: 'transparent',
                 border: 'none',
                 borderBottom: isActive ? '2px solid #EF9F27' : '2px solid transparent',

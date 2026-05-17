@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(python .claude/skills/ui-ux-pro-max/scripts/search.py \"editorial serif display gaming magazine\" --domain typography)",
-      "Bash(mkdir -p \"c:\\\\Users\\\\User\\\\Projects\\\\game-review-magazine\\\\app\\\\reviews\\\\[slug]\" 2>&1 || true)"
+      "Bash(mkdir -p \"c:\\\\Users\\\\User\\\\Projects\\\\game-review-magazine\\\\app\\\\reviews\\\\[slug]\" 2>&1 || true)",
+      "Bash(npx next *)",
+      "Read(//c/Users/User/**)"
     ],
     "additionalDirectories": [
       "c:\\Users\\User\\Projects\\game-review-magazine\\app\\reviews"

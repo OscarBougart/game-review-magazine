@@ -1,4 +1,4 @@
-export type Category = 'All' | 'Action' | 'RPG' | 'Strategy' | 'Indie';
+export type Category = 'All' | 'Action' | 'RPG' | 'Strategy' | 'Indie' | 'Adventure' | 'Simulation';
 
 export interface Review {
   id: string;
@@ -33,7 +33,58 @@ export interface ReviewDetail extends Review {
   relatedSlugs: string[];
 }
 
-export const CATEGORIES: Category[] = ['All', 'Action', 'RPG', 'Strategy', 'Indie'];
+export const CATEGORIES: Category[] = ['All', 'Action', 'RPG', 'Strategy', 'Indie', 'Adventure', 'Simulation'];
+
+export interface CategoryMeta {
+  slug: string;
+  name: Exclude<Category, 'All'>;
+  description: string;
+  imageUrl: string;
+  featured?: boolean;
+  featuredDescription?: string;
+}
+
+export const CATEGORIES_META: CategoryMeta[] = [
+  {
+    slug: 'rpg',
+    name: 'RPG',
+    description: 'Worlds where every decision echoes. Character-driven, systems-deep, and narratively uncompromising.',
+    imageUrl: 'https://cdn.akamai.steamstatic.com/steam/apps/1086940/library_hero.jpg',
+    featured: true,
+    featuredDescription:
+      'Role-playing games are the long-form journalism of interactive entertainment — dense, authored, and rewarding only if you commit. The best RPGs in this collection redefine what player agency means.',
+  },
+  {
+    slug: 'action',
+    name: 'Action',
+    description: 'Combat as poetry. Fast, demanding, and unforgiving to players who refuse to learn.',
+    imageUrl: 'https://cdn.akamai.steamstatic.com/steam/apps/1245620/library_hero.jpg',
+  },
+  {
+    slug: 'strategy',
+    name: 'Strategy',
+    description: 'Every move has a consequence three turns from now. Patience rewarded, hubris punished.',
+    imageUrl: 'https://cdn.akamai.steamstatic.com/steam/apps/1601580/library_hero.jpg',
+  },
+  {
+    slug: 'indie',
+    name: 'Indie',
+    description: 'Small studios, no compromises. The most interesting design decisions in the medium come from here.',
+    imageUrl: 'https://cdn.akamai.steamstatic.com/steam/apps/367520/library_hero.jpg',
+  },
+  {
+    slug: 'adventure',
+    name: 'Adventure',
+    description: 'Worlds worth getting lost in. Exploration over combat, atmosphere over score.',
+    imageUrl: 'https://cdn.akamai.steamstatic.com/steam/apps/632470/library_hero.jpg',
+  },
+  {
+    slug: 'simulation',
+    name: 'Simulation',
+    description: 'Systems so convincing they stop feeling like games and start feeling like responsibility.',
+    imageUrl: 'https://cdn.akamai.steamstatic.com/steam/apps/590380/library_hero.jpg',
+  },
+];
 
 export const FEATURED_REVIEW: Review = {
   id: '1',
@@ -366,6 +417,18 @@ export const REVIEW_DETAILS: Record<string, ReviewDetail> = {
 
 export function getReviewDetail(slug: string): ReviewDetail | undefined {
   return REVIEW_DETAILS[slug];
+}
+
+export function getReviewsByCategory(categorySlug: string): Review[] {
+  const meta = CATEGORIES_META.find((c) => c.slug === categorySlug);
+  if (!meta) return [];
+  return ALL_REVIEWS.filter(
+    (r) => r.category.toLowerCase() === meta.name.toLowerCase()
+  );
+}
+
+export function getCategoryMeta(slug: string): CategoryMeta | undefined {
+  return CATEGORIES_META.find((c) => c.slug === slug);
 }
 
 export function getRelatedReviews(slugs: string[]): Review[] {

@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "9d704209a54818daafb3680a74e672ce",
-    "previewModeSigningKey": "250482bc40422570d4cf6b625f704b025217c1872ff7b7789f9ea8f335d8f723",
-    "previewModeEncryptionKey": "cd0a8b4a53b2432fe2d86d9d1f01268106bf86bd397863b1898b5c9775ac32a7"
-  }
-}
+{"version":4,"routes":{"/reviews/elden-ring":{},"/reviews/baldurs-gate-3":{},"/reviews/hades-ii":{},"/reviews/disco-elysium":{},"/reviews/into-the-breach":{},"/reviews/hollow-knight":{},"/reviews/frostpunk-2":{},"/reviews/neon-white":{},"/reviews/remnant-ii":{},"/categories/rpg":{},"/categories/action":{},"/categories/strategy":{},"/categories/indie":{},"/categories/adventure":{},"/categories/simulation":{}},"dynamicRoutes":{"/reviews/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/reviews/[slug]","routeRegex":"^\\/reviews\\/([^/]+?)(?:\\/)?$","allowHeader":[]},"/categories/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/categories/[slug]","routeRegex":"^\\/categories\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"d742dddc420b4dbfb6bf763d014d3079","previewModeSigningKey":"f5e48bb07cefcffc0dd8fee73768de30314bafc2988beed0121aaa30174aa9b4","previewModeEncryptionKey":"b11d9856356c8ec3e71dbc2cc1d33005508b758cc884b71482eb9aa10740b74f"}}

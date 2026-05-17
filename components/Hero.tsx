@@ -135,7 +135,7 @@ export default function Hero({ review }: HeroProps) {
             fontSize: 16,
             fontWeight: 400,
             lineHeight: 1.65,
-            color: '#C4BDB4',
+            color: 'var(--color-text-article)',
             marginBottom: 28,
             maxWidth: '52ch',
           }}

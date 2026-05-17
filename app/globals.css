@@ -15,6 +15,8 @@
   --color-text:          #F0EBE0;
   --color-text-secondary:#888888;
   --color-text-muted:    #444444;
+  /* Intentionally softer than --color-text for long-form reading comfort */
+  --color-text-article:  #C4BDB4;
 
   --color-error:         #E24B4A;
   --color-success:       #1D9E75;
@@ -63,7 +65,7 @@ body {
 /* ── Scrollbar ──────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: #111111; }
-::-webkit-scrollbar-thumb { background: #2A2A2A; border-radius: 3px; }
+::-webkit-scrollbar-thumb { background: #2A2A2A; border-radius: 0; }
 ::-webkit-scrollbar-thumb:hover { background: #EF9F27; }
 
 /* ── Parallax ───────────────────────────────────────────── */

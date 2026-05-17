@@ -8,9 +8,11 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 'use client';
+;
 ;
 const NAV_LINKS = [
     {
@@ -22,8 +24,8 @@ const NAV_LINKS = [
         href: '/categories'
     },
     {
-        label: 'Best of 2024',
-        href: '/best-of-2024'
+        label: 'Best of 2026',
+        href: '/best-of-2026'
     },
     {
         label: 'About',
@@ -49,7 +51,7 @@ function SearchIcon() {
                 r: "8"
             }, void 0, false, {
                 fileName: "[project]/components/NavHeader.tsx",
-                lineNumber: 26,
+                lineNumber: 27,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -59,13 +61,13 @@ function SearchIcon() {
                 y2: "16.65"
             }, void 0, false, {
                 fileName: "[project]/components/NavHeader.tsx",
-                lineNumber: 27,
+                lineNumber: 28,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/NavHeader.tsx",
-        lineNumber: 15,
+        lineNumber: 16,
         columnNumber: 5
     }, this);
 }
@@ -89,7 +91,7 @@ function HamburgerIcon() {
                 y2: "6"
             }, void 0, false, {
                 fileName: "[project]/components/NavHeader.tsx",
-                lineNumber: 45,
+                lineNumber: 46,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -99,7 +101,7 @@ function HamburgerIcon() {
                 y2: "12"
             }, void 0, false, {
                 fileName: "[project]/components/NavHeader.tsx",
-                lineNumber: 46,
+                lineNumber: 47,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -109,13 +111,13 @@ function HamburgerIcon() {
                 y2: "18"
             }, void 0, false, {
                 fileName: "[project]/components/NavHeader.tsx",
-                lineNumber: 47,
+                lineNumber: 48,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/NavHeader.tsx",
-        lineNumber: 34,
+        lineNumber: 35,
         columnNumber: 5
     }, this);
 }
@@ -139,7 +141,7 @@ function CloseIcon() {
                 y2: "18"
             }, void 0, false, {
                 fileName: "[project]/components/NavHeader.tsx",
-                lineNumber: 65,
+                lineNumber: 66,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -149,13 +151,13 @@ function CloseIcon() {
                 y2: "18"
             }, void 0, false, {
                 fileName: "[project]/components/NavHeader.tsx",
-                lineNumber: 66,
+                lineNumber: 67,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/NavHeader.tsx",
-        lineNumber: 54,
+        lineNumber: 55,
         columnNumber: 5
     }, this);
 }
@@ -165,17 +167,20 @@ function NavHeader() {
     const [scrolled, setScrolled] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [menuOpen, setMenuOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const menuRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
-    // Detect scroll past hero to apply backdrop blur
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "NavHeader.useEffect": ()=>{
-            const onScroll = {
-                "NavHeader.useEffect.onScroll": ()=>setScrolled(window.scrollY > 80)
-            }["NavHeader.useEffect.onScroll"];
-            window.addEventListener('scroll', onScroll, {
+            const update = {
+                "NavHeader.useEffect.update": ()=>{
+                    const y = window.scrollY ?? window.pageYOffset ?? document.documentElement.scrollTop;
+                    setScrolled(y > 10);
+                }
+            }["NavHeader.useEffect.update"];
+            update();
+            window.addEventListener('scroll', update, {
                 passive: true
             });
             return ({
-                "NavHeader.useEffect": ()=>window.removeEventListener('scroll', onScroll)
+                "NavHeader.useEffect": ()=>window.removeEventListener('scroll', update)
             })["NavHeader.useEffect"];
         }
     }["NavHeader.useEffect"], []);
@@ -209,7 +214,7 @@ function NavHeader() {
     }["NavHeader.useEffect"], [
         menuOpen
     ]);
-    const currentPath = ("TURBOPACK compile-time truthy", 1) ? window.location.pathname : "TURBOPACK unreachable";
+    const currentPath = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"])();
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
@@ -222,12 +227,8 @@ function NavHeader() {
                     height: 60,
                     display: 'flex',
                     alignItems: 'center',
-                    // Transparent over hero; gains backdrop blur after scrolling past it
-                    backgroundColor: scrolled ? 'rgba(17,17,17,0.92)' : 'transparent',
-                    backdropFilter: scrolled ? 'blur(12px)' : 'none',
-                    WebkitBackdropFilter: scrolled ? 'blur(12px)' : 'none',
-                    borderBottom: scrolled ? '1px solid #2A2A2A' : '1px solid transparent',
-                    transition: 'background-color 250ms ease-out, backdrop-filter 250ms ease-out, border-color 250ms ease-out'
+                    backgroundColor: '#111111',
+                    borderBottom: '1px solid #2A2A2A'
                 },
                 role: "banner",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -382,7 +383,7 @@ function NavHeader() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                    href: "/submit",
+                                    href: "/write",
                                     style: {
                                         fontFamily: "'Public Sans', system-ui, sans-serif",
                                         fontSize: 11,
@@ -459,7 +460,7 @@ function NavHeader() {
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/NavHeader.tsx",
-                lineNumber: 103,
+                lineNumber: 107,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -590,7 +591,7 @@ function NavHeader() {
                             flexShrink: 0
                         },
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                            href: "/submit",
+                            href: "/write",
                             style: {
                                 fontFamily: "'Public Sans', system-ui, sans-serif",
                                 fontSize: 13,
@@ -647,7 +648,11 @@ function NavHeader() {
         ]
     }, void 0, true);
 }
-_s(NavHeader, "9uyHAxrpYnMNdpoOKln2eH26AHU=");
+_s(NavHeader, "CGYSyM2/tv4FZK+QBs1mw57CCB4=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"]
+    ];
+});
 _c3 = NavHeader;
 var _c, _c1, _c2, _c3;
 __turbopack_context__.k.register(_c, "SearchIcon");

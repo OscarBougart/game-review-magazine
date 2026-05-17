@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import type { ReviewDetail, Review } from '@/lib/reviews';
 import ScoreBadge from './ScoreBadge';
@@ -185,7 +187,7 @@ export default function ReviewBody({ review, related }: ReviewBodyProps) {
               fontStyle: 'italic',
               fontWeight: 400,
               lineHeight: 1.75,
-              color: '#C4BDB4',
+              color: 'var(--color-text-article)',
               marginBottom: 40,
               paddingBottom: 40,
               borderBottom: '1px solid #2A2A2A',
@@ -207,7 +209,7 @@ export default function ReviewBody({ review, related }: ReviewBodyProps) {
                       fontSize: 17,
                       fontWeight: 400,
                       lineHeight: 1.85,
-                      color: '#C4BDB4',
+                      color: 'var(--color-text-article)',
                       marginBottom: 28,
                     }}
                   >
@@ -265,7 +267,7 @@ export default function ReviewBody({ review, related }: ReviewBodyProps) {
                 fontFamily: "'Libre Bodoni', Georgia, serif",
                 fontSize: 17,
                 lineHeight: 1.85,
-                color: '#C4BDB4',
+                color: 'var(--color-text-article)',
                 marginBottom: 28,
                 maxWidth: '68ch',
               }}

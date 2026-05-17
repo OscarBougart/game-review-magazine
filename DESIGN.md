@@ -32,6 +32,7 @@
 | Text primary | `#F0EBE0` | `TEXT_PRIMARY` | Headlines, body copy |
 | Text secondary | `#888888` | `TEXT_SECONDARY` | Metadata, bylines, captions |
 | Text muted | `#444444` | `TEXT_MUTED` | Timestamps, labels, placeholders |
+| Text article | `#C4BDB4` | `TEXT_ARTICLE` | Long-form review body — intentionally softer than `TEXT_PRIMARY` for reading comfort |
 | Accent / CTA | `#EF9F27` | `ACCENT` | Score highlights, active filters, CTAs |
 | Accent dim | `#2A1A00` | `ACCENT_DIM` | Active chip background tint |
 | Error | `#E24B4A` | `RED` | Destructive actions, error states |

@@ -45,7 +45,10 @@
       "path": "/_next/image",
       "loader": "default",
       "loaderFile": "",
-      "domains": [],
+      "domains": [
+        "media.rawg.io",
+        "cdn.akamai.steamstatic.com"
+      ],
       "disableStaticImages": false,
       "minimumCacheTTL": 14400,
       "formats": [

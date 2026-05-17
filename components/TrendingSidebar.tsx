@@ -31,7 +31,8 @@ export default function TrendingSidebar({ reviews }: TrendingSidebarProps) {
         >
           Trending
         </h2>
-        <button
+        <a
+          href="/reviews"
           style={{
             fontFamily: "'Public Sans', system-ui, sans-serif",
             fontSize: 10,
@@ -39,14 +40,12 @@ export default function TrendingSidebar({ reviews }: TrendingSidebarProps) {
             textTransform: 'uppercase',
             letterSpacing: '0.08em',
             color: '#EF9F27',
-            background: 'none',
-            border: 'none',
-            cursor: 'pointer',
+            textDecoration: 'none',
             padding: 0,
           }}
         >
           See all
-        </button>
+        </a>
       </div>
 
       {/* List */}
